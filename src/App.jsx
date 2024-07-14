@@ -1,19 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-
+import React from "react";
+import Sidebar from "./components/Sidebar"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <div>
-     
-      </div>
-      <h1>Bayscope Admin app</h1>
-      
-      
+    <BrowserRouter>
+    <div>
+      <Routes>
+        <Route path="/" element={<Sidebar />} />
+      </Routes>
     </div>
+  </BrowserRouter>
   )
 }
 
